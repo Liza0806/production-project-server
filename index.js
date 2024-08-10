@@ -7,8 +7,7 @@ const server = jsonServer.create();
 
 // Настройка CORS
 server.use(cors({
-    origin: 'https://your-frontend-domain.com', // Замени на домен фронтенда
-    credentials: true, // Разрешить отправку куков, если используешь их
+    origin: 'https://production-project0806.netlify.app',
 }));
 
 const router = jsonServer.router(path.resolve(__dirname, 'db.json'));
