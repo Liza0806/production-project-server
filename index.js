@@ -6,12 +6,7 @@ const path = require('path');
 const server = jsonServer.create();
 
 // Настройка CORS
-server.use(cors({
-    origin: 'https://production-project0806.netlify.app',
-}));
-server.options('*', cors({
-    origin: 'https://production-project0806.netlify.app',
-}));
+
 const router = jsonServer.router(path.resolve(__dirname, 'db.json'));
 
 server.use(jsonServer.defaults({}));
